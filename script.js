@@ -234,11 +234,12 @@ function typeWriter(element, text, speed = 100) {
 
 // Initialize typing effect when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
-        typeWriter(heroTitle, originalText, 50);
-    }
+    // Remove typing effect as it's causing HTML rendering issues
+    // const heroTitle = document.querySelector('.hero-title');
+    // if (heroTitle) {
+    //     const originalText = heroTitle.innerHTML;
+    //     typeWriter(heroTitle, originalText, 50);
+    // }
     
     // Initialize loading screen
     const loadingScreen = document.createElement('div');
