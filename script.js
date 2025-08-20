@@ -239,64 +239,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const originalText = heroTitle.innerHTML;
         typeWriter(heroTitle, originalText, 50);
     }
-});
-
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const rate = scrolled * -0.5;
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
-
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-
-// Add loading styles
-const loadingStyles = document.createElement('style');
-loadingStyles.textContent = `
-    body:not(.loaded) {
-        overflow: hidden;
-    }
     
-    body:not(.loaded)::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    // Initialize loading screen
+    const loadingScreen = document.createElement('div');
+    loadingScreen.className = 'loading';
+    loadingScreen.innerHTML = `
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">Loading Portfolio...</div>
+        </div>
+    `;
+    document.body.appendChild(loadingScreen);
     
-    body:not(.loaded)::after {
-        content: 'HTAN';
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 3rem;
-        font-weight: 700;
-        z-index: 10000;
-        animation: pulse 1.5s infinite;
-    }
-    
-    @keyframes pulse {
-        0%, 100% {
-            opacity: 1;
-        }
-        50% {
-            opacity: 0.5;
-        }
-    }
-`;
-document.head.appendChild(loadingStyles);
+    // Hide loading screen after page is fully loaded
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+            setTimeout(() => {
+                loadingScreen.remove();
+            }, 500);
+        }, 1000);
+    });
+});
