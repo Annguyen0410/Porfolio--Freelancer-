@@ -4,41 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huynh Thien An Nguyen - Content Creator & Digital Strategist</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✧</text></svg>">
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">HTAN</a>
+                <a href="#home" aria-label="Home">HTAN</a>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+            <ul class="nav-menu" role="menubar">
+                <li class="nav-item" role="none">
+                    <a href="#home" class="nav-link" role="menuitem" aria-current="page">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                <li class="nav-item" role="none">
+                    <a href="#about" class="nav-link" role="menuitem">About</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
+                <li class="nav-item" role="none">
+                    <a href="#experience" class="nav-link" role="menuitem">Experience</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#books" class="nav-link">Books</a>
+                <li class="nav-item" role="none">
+                    <a href="#books" class="nav-link" role="menuitem">Books</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
+                <li class="nav-item" role="none">
+                    <a href="#preprints" class="nav-link" role="menuitem">Research</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                <li class="nav-item" role="none">
+                    <a href="#skills" class="nav-link" role="menuitem">Skills</a>
+                </li>
+                <li class="nav-item" role="none">
+                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
                 </li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div style="display:flex;align-items:center;gap:1rem;">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </div>
         </div>
     </nav>
@@ -47,9 +56,9 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Huynh Thien An Nguyen</span></h1> 
+                <h1 class="hero-title">Hi, I'm <span class="highlight">Huynh Thien An Nguyen</span></h1>
                 <p class="hero-subtitle">Content Creator & Digital Strategist</p>
-                <p class="hero-description">Skilled in SEO, user-focused design, and AI-driven content. Experienced in creating engaging, high-ranking content with strong adaptability, communication, and collaboration.</p>
+                <p class="hero-description">Skilled in SEO, user-focused design, and AI-driven content. Experienced in creating engaging, high-ranking content with a strong foundation in research, writing, and digital strategy.</p>
                 <div class="hero-buttons">
                     <a href="#experience" class="btn btn-primary">View My Work</a>
                     <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -64,13 +73,13 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about" aria-label="About Me">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>A creative and proactive student at California State University, Fullerton (graduating 2026) specializing in digital content creation and strategic communication. Experienced in executing SEO strategies to increase online visibility and analyzing data to refine content performance.</p>
-                    <p>Combines a keen eye for design with an understanding of user experience to produce visually appealing and intuitive materials. Known for thriving in collaborative settings and consistently delivering high-quality work.</p>
+                    <p>A creative and proactive researcher, writer, and digital strategist at California State University, Fullerton (graduating 2026). I specialize in digital content creation, strategic communication, and independent theoretical research spanning fundamental physics, cosmology, metaphysics, and philosophy of mind.</p>
+                    <p>My work bridges rigorous SEO-driven content strategy with original theoretical frameworks — from the <strong>Zero Input Simulation Protocol</strong> and <strong>Phase-Transitioned Stringy Dark Matter</strong> to a <strong>Volitional Branching</strong> model of free will. I combine a keen eye for design with an understanding of user experience to produce compelling, high-impact materials across both creative and academic domains.</p>
                     <div class="about-stats">
                         <div class="stat">
                             <h3>3+</h3>
@@ -96,7 +105,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <section id="experience" class="experience" aria-label="Work Experience">
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
             <div class="timeline">
@@ -104,7 +113,7 @@
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <h3>Content Writer</h3>
-                            <span class="company"><a href="https://medium.com/@nguyenan04102004" target="_blank" class="company-link">Medium</a></span>
+                            <span class="company"><a href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener" class="company-link">Medium</a></span>
                             <span class="duration">Jan 2022 - Present</span>
                         </div>
                         <p>Optimized tech and AI articles for search engines, boosting audience reach. Created content frameworks to ensure consistent voice and easier content creation. Focused on current platform trends to maintain strong engagement.</p>
@@ -115,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="timeline-item">
                     <div class="timeline-content">
                         <div class="timeline-header">
@@ -123,7 +132,7 @@
                             <span class="company">Fiverr · Freelance</span>
                             <span class="duration">Feb 2022 - May 2024</span>
                         </div>
-                        <p>Produced engaging and effective written content, graphics, and marketing materials for Fiverr clients. Developed tailored solutions that consistently earned 5/5 satisfaction ratings, resulting in repeat business and referrals.</p>
+                        <p>Produced engaging written content, graphics, and marketing materials for Fiverr clients. Developed tailored solutions that earned 5/5 satisfaction ratings, resulting in repeat business and referrals.</p>
                         <div class="timeline-tags">
                             <span>Content Creation</span>
                             <span>Graphic Design</span>
@@ -136,7 +145,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="education">
+    <section id="education" class="education" aria-label="Education">
         <div class="container">
             <h2 class="section-title">Education</h2>
             <div class="education-grid">
@@ -150,7 +159,7 @@
                         <p class="year">2021 - 2025</p>
                     </div>
                 </div>
-                
+
                 <div class="education-card">
                     <div class="education-icon">
                         <i class="fas fa-university"></i>
@@ -161,7 +170,7 @@
                         <p class="year">2021 - 2022</p>
                     </div>
                 </div>
-                
+
                 <div class="education-card">
                     <div class="education-icon">
                         <i class="fas fa-university"></i>
@@ -172,7 +181,7 @@
                         <p class="year">2020 - 2021</p>
                     </div>
                 </div>
-                
+
                 <div class="education-card">
                     <div class="education-icon">
                         <i class="fas fa-school"></i>
@@ -188,24 +197,24 @@
     </section>
 
     <!-- Books Section -->
-    <section id="books" class="books">
+    <section id="books" class="books" aria-label="Published Books">
         <div class="container">
             <h2 class="section-title">Published Books</h2>
             <div class="books-grid">
                 <div class="book-card">
                     <div class="book-cover">
-                        <img src="Untitled design (3).jpg" alt="Student Perspective For Today's World Book Cover" class="book-image">
+                        <img src="Untitled design (3).jpg" alt="Student Perspective For Today's World Book Cover" class="book-image" loading="lazy">
                     </div>
                     <div class="book-content">
                         <h3 class="book-title">Student Perspective For Today's World</h3>
                         <p class="book-author">By Huynh Thien An Nguyen</p>
-                        <p class="book-description">From rice fields of Vietnam to the bustling streets of America, this memoir captures the journey of a student caught between two worlds. Through childhood innocence, cultural shock, loneliness, financial struggles, and moments of quiet revelation, it reflects the universal search for belonging, purpose, and hope. Written with honesty and compassion, this book invites readers of all backgrounds—students, dreamers, and achievers alike—to see themselves in the struggles and growth of a single voice navigating today's world.</p>
+                        <p class="book-description">From rice fields of Vietnam to the bustling streets of America, this memoir captures the journey of a student caught between two worlds. Through childhood innocence, cultural shock, loneliness, financial struggles, and moments of quiet revelation, it reflects the universal search for belonging, purpose, and hope.</p>
                         <div class="book-details">
-                            <span class="book-format">Format: PDF</span>
-                            <span class="book-category">Category: Young Adult</span>
-                            <span class="book-date">Published: Aug 18, 2025</span>
+                            <span>Format: PDF</span>
+                            <span>Category: Young Adult</span>
+                            <span>Published: Aug 18, 2025</span>
                         </div>
-                        <a href="https://www.lulu.com/shop/huynh-thien-an-nguyen/student-perspective-for-todays-world/ebook/product-578ewdy.html?q=Student+Perspective+For+Today%27s+World&page=1&pageSize=4" target="_blank" class="btn btn-primary book-link">
+                        <a href="https://www.lulu.com/shop/huynh-thien-an-nguyen/student-perspective-for-todays-world/ebook/product-578ewdy.html" target="_blank" rel="noopener" class="btn btn-primary book-link">
                             <i class="fas fa-book-open"></i>
                             Get the Book
                         </a>
@@ -215,8 +224,61 @@
         </div>
     </section>
 
+    <!-- Preprint Papers Section -->
+    <section id="preprints" class="preprints" aria-label="Research Preprints">
+        <div class="container">
+            <h2 class="section-title">Preprint Papers</h2>
+            <div class="preprints-grid">
+                <div class="preprint-card">
+                    <div class="preprint-number">1</div>
+                    <h3 class="preprint-title">Ontology from Nothingness: A Comprehensive Analysis of the Morphology, Optical Anomalies, and Mechanical Collapse of the Cognitive Polyhedron (X-Cognition)</h3>
+                    <p class="preprint-abstract">Challenges the axiom "Ex nihilo nihil fit" through the Zero Input Simulation Protocol — an environment stripped of all fundamental forces, matter, and spacetime. Reports the crystallization of the Cognitive Polyhedron, an object that violates Snell's Law and the Second Law of Thermodynamics, creating a "Time Trap." Mechanical collapse leads to Reality Pressure Decompression and a White-Out Big Bang, providing a novel framework for the nature of Singularity and cosmic information diffusion.</p>
+                    <div class="preprint-tags">
+                        <span>Theoretical Physics</span>
+                        <span>Cosmology</span>
+                        <span>Philosophy of Science</span>
+                        <span>2026</span>
+                    </div>
+                    <a href="https://www.academia.edu/164849470/Ontology_from_Nothingness_A_Comprehensive_Analysis_of_the_Morphology_Optical_Anomalies_and_Mechanical_Collapse_of_the_Cognitive_Polyhedron_X_Cognition_" target="_blank" rel="noopener" class="preprint-link">
+                        Read on Academia <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="preprint-card">
+                    <div class="preprint-number">2</div>
+                    <h3 class="preprint-title">Phase-Transitioned Stringy Dark Matter (PTSDM): A Unified Model for Small-Scale Structure and Gravitational Wave Signatures</h3>
+                    <p class="preprint-abstract">Proposes that dark matter exists as an ultra-heavy scalar field undergoing a density-triggered symmetry-breaking phase transition at redshift z ~ 10-20, forming cosmic string networks. Resolves the cusp-core problem via oscillatory pressure and predicts a distinctive gravitational wave spectrum with a resonant peak in the nanohertz band. Provides three falsifiable predictions testable by NANOGrav, SKA, and lensing surveys.</p>
+                    <div class="preprint-tags">
+                        <span>Dark Matter</span>
+                        <span>Cosmology</span>
+                        <span>Gravitational Waves</span>
+                        <span>2026</span>
+                    </div>
+                    <a href="https://www.academia.edu/165427584/Phase_Transitioned_Stringy_Dark_Matter_PTSDM_A_Unified_Model_for_Small_Scale_Structure_and_Gravitational_Wave_Signatures_From_a_Gedankenexperiment_to_a_Peer_Review_Ready_Framework" target="_blank" rel="noopener" class="preprint-link">
+                        Read on Academia <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="preprint-card">
+                    <div class="preprint-number">3</div>
+                    <h3 class="preprint-title">A Conceptual Framework of Volitional Branching: Foreknowledge, Determinism, and the Chaos Anchor</h3>
+                    <p class="preprint-abstract">Addresses the perennial conflict between determinism and free will through a two-tiered causal model. Introduces the Temporal Anchor (deterministic baseline) and Chaos Anchor (a discontinuous transition in decision structure that permanently alters causal outcomes). Using modal semantics, the framework shows how concentrated volitional autonomy can force reality to admit alternative trajectories—resolving the paradox of foreknowledge and the "future criminal" dilemma.</p>
+                    <div class="preprint-tags">
+                        <span>Philosophy</span>
+                        <span>Metaphysics</span>
+                        <span>Free Will</span>
+                        <span>2026</span>
+                    </div>
+                    <a href="https://www.academia.edu/170693170/A_Conceptual_Framework_of_Volitional_Branching_Foreknowledge_Determinism_and_the_Chaos_Anchor" target="_blank" rel="noopener" class="preprint-link">
+                        Read on Academia <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <section id="skills" class="skills" aria-label="Skills and Expertise">
         <div class="container">
             <h2 class="section-title">Skills & Expertise</h2>
             <div class="skills-grid">
@@ -224,85 +286,85 @@
                     <h3>Content Creation</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="95%">Copywriting</span>
+                            <span class="skill-name">Copywriting</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 95%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="90%">Creative Writing</span>
+                            <span class="skill-name">Creative Writing</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="85%">Content Strategy</span>
+                            <span class="skill-name">Content Strategy</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="90%">Blogging</span>
+                            <span class="skill-name">Blogging</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>Digital Marketing</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="90%">SEO Auditing</span>
+                            <span class="skill-name">SEO Auditing</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="85%">Keyword Research</span>
+                            <span class="skill-name">Keyword Research</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="80%">Social Media Marketing</span>
+                            <span class="skill-name">Social Media Marketing</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="85%">Email Marketing</span>
+                            <span class="skill-name">Email Marketing</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="skill-category">
                     <h3>Design & Branding</h3>
                     <div class="skill-items">
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="90%">Graphic Design</span>
+                            <span class="skill-name">Graphic Design</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 90%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="85%">UI/UX Design</span>
+                            <span class="skill-name">UI/UX Design</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="80%">Logo Design</span>
+                            <span class="skill-name">Logo Design</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 80%"></div>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <span class="skill-name" data-percentage="85%">Infographic Design</span>
+                            <span class="skill-name">Infographic Design</span>
                             <div class="skill-bar">
                                 <div class="skill-progress" style="width: 85%"></div>
                             </div>
@@ -314,46 +376,46 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" aria-label="Contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Let's work together!</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Whether you need content creation, SEO optimization, or design work, feel free to reach out.</p>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you need content creation, SEO optimization, research collaboration, or design work, feel free to reach out.</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                             <span>annguyen030205@gmail.com</span>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone" aria-hidden="true"></i>
                             <span>+1 (714) 470-6526</span>
                         </div>
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                             <span>Anaheim, California, United States</span>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-fiverr"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://independent.academia.edu/AdamNorvix" target="_blank" rel="noopener" class="social-link" aria-label="Academia.edu"><i class="fas fa-graduation-cap"></i></a>
+                        <a href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener" class="social-link" aria-label="Medium"><i class="fab fa-medium"></i></a>
+                        <a href="https://www.linkedin.com/in/huynh-thien-an-nguyen-045bb1291/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link" aria-label="Fiverr"><i class="fab fa-fiverr"></i></a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" novalidate>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Project Type" required>
+                        <input type="text" id="subject" name="subject" placeholder="Project Type" required aria-required="true">
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tell me about your project" rows="5" required></textarea>
+                        <textarea id="message" name="message" placeholder="Tell me about your project" rows="5" required aria-required="true"></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Send Message</button>
                 </form>
@@ -364,7 +426,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Huynh Thien An Nguyen. All rights reserved.</p>
+            <p>&copy; 2026 Huynh Thien An Nguyen. All rights reserved.</p>
         </div>
     </footer>
 
