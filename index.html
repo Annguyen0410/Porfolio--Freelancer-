@@ -3,432 +3,608 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huynh Thien An Nguyen - Content Creator & Digital Strategist</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✧</text></svg>">
+    <title>Huynh Thien An Nguyen — Freelance Content Creator</title>
+    <meta name="description" content="Freelance content creator working in long-form writing, editing, social storytelling, and service-business website content. Published on Medium since 2024; 13 independent website concepts, four live.">
+    <meta name="author" content="Huynh Thien An Nguyen">
+    <meta property="og:title" content="Huynh Thien An Nguyen — Freelance Content Creator">
+    <meta property="og:description" content="Writing, editing, and web design for service businesses. Independent writer and publisher.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23141210'/><text x='50' y='72' font-size='62' font-family='Georgia,serif' fill='%23f3efe7' text-anchor='middle'>A</text></svg>">
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300..900;1,300..900&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" role="navigation" aria-label="Main navigation">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home" aria-label="Home">HTAN</a>
-            </div>
-            <ul class="nav-menu" role="menubar">
-                <li class="nav-item" role="none">
-                    <a href="#home" class="nav-link" role="menuitem" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#about" class="nav-link" role="menuitem">About</a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#experience" class="nav-link" role="menuitem">Experience</a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#books" class="nav-link" role="menuitem">Books</a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#preprints" class="nav-link" role="menuitem">Research</a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#skills" class="nav-link" role="menuitem">Skills</a>
-                </li>
-                <li class="nav-item" role="none">
-                    <a href="#contact" class="nav-link" role="menuitem">Contact</a>
-                </li>
-            </ul>
-            <div style="display:flex;align-items:center;gap:1rem;">
-                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <div class="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="read-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+    <!-- Vertical spine (desktop) -->
+    <div class="spine" aria-hidden="true">
+        <span class="spine-tick" id="spineTicker">№ 00 · Cover</span>
+        <span class="spine-name">Huynh Thien An Nguyen — Freelance Content Creator</span>
+    </div>
+
+    <!-- Top bar -->
+    <header class="topbar">
+        <a class="mark" href="#top" aria-label="Back to top">
+            <span class="mark-glyph">H</span><span class="mark-rest">TAN</span><span class="mark-dot">.</span>
+        </a>
+        <nav class="topnav" aria-label="Quick links">
+            <a href="#work">Work</a>
+            <a href="#writing">Writing</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="topbar-tools">
+            <button type="button" class="tool" id="indexBtn" aria-expanded="false" aria-controls="indexOverlay">
+                <span class="tool-label">Index</span>
+                <span class="tool-glyph" aria-hidden="true">☰</span>
+            </button>
+            <button type="button" class="tool" id="themeToggle" aria-label="Switch colour mode">
+                <span class="tool-label" id="themeLabel">Dark</span>
+                <span class="tool-glyph" aria-hidden="true">◐</span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Hi, I'm <span class="highlight">Huynh Thien An Nguyen</span></h1>
-                <p class="hero-subtitle">Content Creator & Digital Strategist</p>
-                <p class="hero-description">Skilled in SEO, user-focused design, and AI-driven content. Experienced in creating engaging, high-ranking content with a strong foundation in research, writing, and digital strategy.</p>
-                <div class="hero-buttons">
-                    <a href="#experience" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="hero-avatar">
-                    <i class="fas fa-pen-fancy"></i>
-                </div>
-            </div>
+    <!-- Full-screen index -->
+    <div class="index-overlay" id="indexOverlay" hidden>
+        <div class="index-inner">
+            <p class="index-head">Contents</p>
+            <ol class="index-list">
+                <li><a href="#profile" data-index="01"><span class="index-no">01</span><span class="index-name">Profile</span><span class="index-note">Who is writing</span></a></li>
+                <li><a href="#capabilities" data-index="02"><span class="index-no">02</span><span class="index-name">Capabilities</span><span class="index-note">Writing, editing, social, web</span></a></li>
+                <li><a href="#work" data-index="03"><span class="index-no">03</span><span class="index-name">Website Work</span><span class="index-note">Four live concepts</span></a></li>
+                <li><a href="#experience" data-index="04"><span class="index-no">04</span><span class="index-name">Experience</span><span class="index-note">Medium &amp; independent projects</span></a></li>
+                <li><a href="#process" data-index="05"><span class="index-no">05</span><span class="index-name">Process</span><span class="index-note">Clarify, create, refine</span></a></li>
+                <li><a href="#writing" data-index="06"><span class="index-no">06</span><span class="index-name">Selected Writing</span><span class="index-note">Published pieces</span></a></li>
+                <li><a href="#social" data-index="07"><span class="index-no">07</span><span class="index-name">Social Concept</span><span class="index-note">TheLoneChair</span></a></li>
+                <li><a href="#publishing" data-index="08"><span class="index-no">08</span><span class="index-name">Long-form Publishing</span><span class="index-note">Independent book</span></a></li>
+                <li><a href="#research" data-index="09"><span class="index-no">09</span><span class="index-name">Research</span><span class="index-note">Preprints &amp; theory</span></a></li>
+                <li><a href="#background" data-index="10"><span class="index-no">10</span><span class="index-name">Background</span><span class="index-note">Study &amp; languages</span></a></li>
+                <li><a href="#contact" data-index="11"><span class="index-no">11</span><span class="index-name">Contact</span><span class="index-note">Start a project</span></a></li>
+            </ol>
+            <p class="index-foot">
+                <a href="mailto:annguyen030205@gmail.com">annguyen030205@gmail.com</a>
+                <span>Anaheim, California</span>
+            </p>
         </div>
-    </section>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about" aria-label="About Me">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A creative and proactive researcher, writer, and digital strategist at California State University, Fullerton (graduating 2026). I specialize in digital content creation, strategic communication, and independent theoretical research spanning fundamental physics, cosmology, metaphysics, and philosophy of mind.</p>
-                    <p>My work bridges rigorous SEO-driven content strategy with original theoretical frameworks — from the <strong>Zero Input Simulation Protocol</strong> and <strong>Phase-Transitioned Stringy Dark Matter</strong> to a <strong>Volitional Branching</strong> model of free will. I combine a keen eye for design with an understanding of user experience to produce compelling, high-impact materials across both creative and academic domains.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
+    <main id="main">
+        <!-- ============ 00 · HERO ============ -->
+        <section class="hero" id="top">
+            <div class="hero-grid">
+                <div class="hero-lead">
+                    <p class="eyebrow"><span class="eyebrow-rule" aria-hidden="true"></span>Freelance content creator — writing, editing &amp; web design</p>
+                    <h1 class="hero-name">
+                        <span class="line">Huynh</span>
+                        <span class="line line-2">Thien An</span>
+                        <span class="line line-3"><em>Nguyen</em></span>
+                    </h1>
+                    <p class="hero-lede">
+                        Freelance content creator combining long-form writing, editing, social storytelling, and
+                        service-business website content — taking work from initial research and structure through
+                        polished copy, visual hierarchy, and online publication.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-solid" href="#work">See the work <span aria-hidden="true">→</span></a>
+                        <a class="btn btn-line" href="#contact">Start a project</a>
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="about-avatar">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
+
+                <aside class="specimen reveal" aria-label="At a glance">
+                    <p class="specimen-head">At a glance</p>
+                    <dl class="specimen-figures">
+                        <div><dt>Website concepts</dt><dd>13</dd></div>
+                        <div><dt>Live examples</dt><dd>4</dd></div>
+                        <div><dt>Publishing on Medium since</dt><dd>2024</dd></div>
+                        <div><dt>Working languages</dt><dd>2</dd></div>
+                    </dl>
+                    <ul class="specimen-meta">
+                        <li><span>Based in</span>Anaheim, California</li>
+                        <li><span>Format</span>Remote · project-based</li>
+                        <li><span>Projects</span>Open to freelance briefs</li>
+                    </ul>
+                </aside>
+            </div>
+
+            <div class="ticker" aria-hidden="true">
+                <div class="ticker-track">
+                    <span>Long-form articles <b>·</b> Website copy <b>·</b> Proofreading <b>·</b> Rewriting <b>·</b> Headlines <b>·</b> Service descriptions <b>·</b> Landing-page structure <b>·</b> FAQ sections <b>·</b> Bilingual social captions <b>·</b> Topic research <b>·</b> Editorial voice <b>·</b></span>
+                    <span>Long-form articles <b>·</b> Website copy <b>·</b> Proofreading <b>·</b> Rewriting <b>·</b> Headlines <b>·</b> Service descriptions <b>·</b> Landing-page structure <b>·</b> FAQ sections <b>·</b> Bilingual social captions <b>·</b> Topic research <b>·</b> Editorial voice <b>·</b></span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience" aria-label="Work Experience">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Content Writer</h3>
-                            <span class="company"><a href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener" class="company-link">Medium</a></span>
-                            <span class="duration">Jan 2022 - Present</span>
-                        </div>
-                        <p>Optimized tech and AI articles for search engines, boosting audience reach. Created content frameworks to ensure consistent voice and easier content creation. Focused on current platform trends to maintain strong engagement.</p>
-                        <div class="timeline-tags">
-                            <span>SEO</span>
-                            <span>Content Strategy</span>
-                            <span>AI Content</span>
-                        </div>
-                    </div>
+        <!-- ============ 01 · PROFILE ============ -->
+        <section class="chapter" id="profile" data-chapter="01" data-title="Profile">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>01</span> Profile</p>
+                <h2 class="chapter-title">A writing practice that ends <em>in publication.</em></h2>
+            </header>
+            <div class="chapter-body two-col">
+                <div class="col-main">
+                    <p class="dropcap">Freelance content creator combining long-form writing, editing, social storytelling, and service-business website content. Experienced in taking work from initial research and structure through polished copy, visual hierarchy, and online publication.</p>
+                    <p>Original writing has appeared on Medium since 2024, spanning education and marketing, digital culture, lifestyle, and research-led technology and science topics. Alongside that, thirteen independent website concepts have been developed for local service-business categories, four of which are live and documented below.</p>
+                    <p>The habit underneath all of it is the same: read carefully, structure clearly, and cut anything that does not help the reader decide or understand.</p>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Content Creator</h3>
-                            <span class="company">Fiverr · Freelance</span>
-                            <span class="duration">Feb 2022 - May 2024</span>
-                        </div>
-                        <p>Produced engaging written content, graphics, and marketing materials for Fiverr clients. Developed tailored solutions that earned 5/5 satisfaction ratings, resulting in repeat business and referrals.</p>
-                        <div class="timeline-tags">
-                            <span>Content Creation</span>
-                            <span>Graphic Design</span>
-                            <span>Client Management</span>
-                        </div>
-                    </div>
-                </div>
+                <aside class="marginalia">
+                    <p class="margin-label">Margin note</p>
+                    <p>Everything listed here is work I produced myself. Website concepts are independent studies, not claims of paid-client work or business endorsement.</p>
+                </aside>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education Section -->
-    <section id="education" class="education" aria-label="Education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>California State University, Fullerton</h3>
-                        <p class="degree">Bachelor of Science in Computer Science</p>
-                        <p class="year">2021 - 2025</p>
-                    </div>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Golden West College</h3>
-                        <p class="degree">Computer Science</p>
-                        <p class="year">2021 - 2022</p>
-                    </div>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Cypress College</h3>
-                        <p class="degree">Computer Science</p>
-                        <p class="year">2020 - 2021</p>
-                    </div>
-                </div>
-
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <div class="education-content">
-                        <h3>Magnolia High School</h3>
-                        <p class="degree">Computer Science</p>
-                        <p class="year">2016 - 2020</p>
-                    </div>
-                </div>
+        <!-- ============ 02 · CAPABILITIES ============ -->
+        <section class="chapter" id="capabilities" data-chapter="02" data-title="Capabilities">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>02</span> Capabilities</p>
+                <h2 class="chapter-title">Four things I am <em>consistently asked</em> to do.</h2>
+            </header>
+            <div class="capability-grid">
+                <article class="capability reveal">
+                    <p class="cap-no">01</p>
+                    <h3>Writing &amp; Copywriting</h3>
+                    <p class="cap-line">Articles, blog posts, website pages, headlines, service descriptions, calls to action, educational content, and social captions.</p>
+                </article>
+                <article class="capability reveal">
+                    <p class="cap-no">02</p>
+                    <h3>Editing &amp; Refinement</h3>
+                    <p class="cap-line">Proofreading, rewriting, grammar, clarity, structure, flow, voice consistency, and final-read polish.</p>
+                </article>
+                <article class="capability reveal">
+                    <p class="cap-no">03</p>
+                    <h3>Social &amp; Editorial Content</h3>
+                    <p class="cap-line">Content concepts, bilingual captioning, audience prompts, long-form structure, topic research, and platform-aware formatting.</p>
+                </article>
+                <article class="capability reveal">
+                    <p class="cap-no">04</p>
+                    <h3>Web Content &amp; Page Layout</h3>
+                    <p class="cap-line">Landing-page structure, information hierarchy, service menus, galleries, FAQ sections, business information, and inquiry-focused layouts.</p>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Books Section -->
-    <section id="books" class="books" aria-label="Published Books">
-        <div class="container">
-            <h2 class="section-title">Published Books</h2>
-            <div class="books-grid">
-                <div class="book-card">
-                    <div class="book-cover">
-                        <img src="Untitled design (3).jpg" alt="Student Perspective For Today's World Book Cover" class="book-image" loading="lazy">
-                    </div>
-                    <div class="book-content">
-                        <h3 class="book-title">Student Perspective For Today's World</h3>
-                        <p class="book-author">By Huynh Thien An Nguyen</p>
-                        <p class="book-description">From rice fields of Vietnam to the bustling streets of America, this memoir captures the journey of a student caught between two worlds. Through childhood innocence, cultural shock, loneliness, financial struggles, and moments of quiet revelation, it reflects the universal search for belonging, purpose, and hope.</p>
-                        <div class="book-details">
-                            <span>Format: PDF</span>
-                            <span>Category: Young Adult</span>
-                            <span>Published: Aug 18, 2025</span>
-                        </div>
-                        <a href="https://www.lulu.com/shop/huynh-thien-an-nguyen/student-perspective-for-todays-world/ebook/product-578ewdy.html" target="_blank" rel="noopener" class="btn btn-primary book-link">
-                            <i class="fas fa-book-open"></i>
-                            Get the Book
-                        </a>
-                    </div>
-                </div>
+        <!-- ============ 03 · WEBSITE WORK ============ -->
+        <section class="chapter" id="work" data-chapter="03" data-title="Website Work">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>03</span> Website Work</p>
+                <h2 class="chapter-title">Thirteen concepts. <em>Four live.</em></h2>
+                <p class="chapter-sub">
+                    Independent website concepts for local service businesses. Each combines service-focused copy,
+                    visual hierarchy, business information, and a clear contact or appointment path.
+                </p>
+            </header>
+
+            <div class="counter" role="img" aria-label="Thirteen website concepts, four of them live">
+                <span class="counter-cell is-live">01</span>
+                <span class="counter-cell is-live">02</span>
+                <span class="counter-cell is-live">03</span>
+                <span class="counter-cell is-live">04</span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
+                <span class="counter-cell"></span>
             </div>
-        </div>
-    </section>
+            <p class="counter-legend"><span class="legend-dot" aria-hidden="true"></span> Four published and linked below · nine further concepts held in draft</p>
 
-    <!-- Preprint Papers Section -->
-    <section id="preprints" class="preprints" aria-label="Research Preprints">
-        <div class="container">
-            <h2 class="section-title">Preprint Papers</h2>
-            <div class="preprints-grid">
-                <div class="preprint-card">
-                    <div class="preprint-number">1</div>
-                    <h3 class="preprint-title">Ontology from Nothingness: A Comprehensive Analysis of the Morphology, Optical Anomalies, and Mechanical Collapse of the Cognitive Polyhedron (X-Cognition)</h3>
-                    <p class="preprint-abstract">Challenges the axiom "Ex nihilo nihil fit" through the Zero Input Simulation Protocol — an environment stripped of all fundamental forces, matter, and spacetime. Reports the crystallization of the Cognitive Polyhedron, an object that violates Snell's Law and the Second Law of Thermodynamics, creating a "Time Trap." Mechanical collapse leads to Reality Pressure Decompression and a White-Out Big Bang, providing a novel framework for the nature of Singularity and cosmic information diffusion.</p>
-                    <div class="preprint-tags">
-                        <span>Theoretical Physics</span>
-                        <span>Cosmology</span>
-                        <span>Philosophy of Science</span>
-                        <span>2026</span>
+            <ol class="work-list">
+                <li class="work-row reveal">
+                    <span class="work-no">01</span>
+                    <div class="work-cell">
+                        <h3 class="work-name">E&amp;J's Barbershop</h3>
+                        <p class="work-kind">Barbershop concept</p>
                     </div>
-                    <a href="https://www.academia.edu/164849470/Ontology_from_Nothingness_A_Comprehensive_Analysis_of_the_Morphology_Optical_Anomalies_and_Mechanical_Collapse_of_the_Cognitive_Polyhedron_X_Cognition_" target="_blank" rel="noopener" class="preprint-link">
-                        Read on Academia <i class="fas fa-arrow-right"></i>
+                    <p class="work-desc">Organizes services, location and hours, FAQs, and an appointment inquiry into one clear customer path.</p>
+                    <a class="work-link" href="https://ejsbarbershop.netlify.app" target="_blank" rel="noopener">
+                        <span class="work-domain">ejsbarbershop.netlify.app</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                        <span class="visually-hidden">— visit site (opens in a new tab)</span>
                     </a>
-                </div>
-
-                <div class="preprint-card">
-                    <div class="preprint-number">2</div>
-                    <h3 class="preprint-title">Phase-Transitioned Stringy Dark Matter (PTSDM): A Unified Model for Small-Scale Structure and Gravitational Wave Signatures</h3>
-                    <p class="preprint-abstract">Proposes that dark matter exists as an ultra-heavy scalar field undergoing a density-triggered symmetry-breaking phase transition at redshift z ~ 10-20, forming cosmic string networks. Resolves the cusp-core problem via oscillatory pressure and predicts a distinctive gravitational wave spectrum with a resonant peak in the nanohertz band. Provides three falsifiable predictions testable by NANOGrav, SKA, and lensing surveys.</p>
-                    <div class="preprint-tags">
-                        <span>Dark Matter</span>
-                        <span>Cosmology</span>
-                        <span>Gravitational Waves</span>
-                        <span>2026</span>
+                </li>
+                <li class="work-row reveal">
+                    <span class="work-no">02</span>
+                    <div class="work-cell">
+                        <h3 class="work-name">Nailshop Hattiesburg</h3>
+                        <p class="work-kind">Nail salon concept</p>
                     </div>
-                    <a href="https://www.academia.edu/165427584/Phase_Transitioned_Stringy_Dark_Matter_PTSDM_A_Unified_Model_for_Small_Scale_Structure_and_Gravitational_Wave_Signatures_From_a_Gedankenexperiment_to_a_Peer_Review_Ready_Framework" target="_blank" rel="noopener" class="preprint-link">
-                        Read on Academia <i class="fas fa-arrow-right"></i>
+                    <p class="work-desc">Presents treatment categories, gallery, business details, and a clear appointment and contact route.</p>
+                    <a class="work-link" href="https://nailshophattiesburg.netlify.app" target="_blank" rel="noopener">
+                        <span class="work-domain">nailshophattiesburg.netlify.app</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                        <span class="visually-hidden">— visit site (opens in a new tab)</span>
                     </a>
-                </div>
-
-                <div class="preprint-card">
-                    <div class="preprint-number">3</div>
-                    <h3 class="preprint-title">A Conceptual Framework of Volitional Branching: Foreknowledge, Determinism, and the Chaos Anchor</h3>
-                    <p class="preprint-abstract">Addresses the perennial conflict between determinism and free will through a two-tiered causal model. Introduces the Temporal Anchor (deterministic baseline) and Chaos Anchor (a discontinuous transition in decision structure that permanently alters causal outcomes). Using modal semantics, the framework shows how concentrated volitional autonomy can force reality to admit alternative trajectories—resolving the paradox of foreknowledge and the "future criminal" dilemma.</p>
-                    <div class="preprint-tags">
-                        <span>Philosophy</span>
-                        <span>Metaphysics</span>
-                        <span>Free Will</span>
-                        <span>2026</span>
+                </li>
+                <li class="work-row reveal">
+                    <span class="work-no">03</span>
+                    <div class="work-cell">
+                        <h3 class="work-name">Tips &amp; Toes Nail Spa</h3>
+                        <p class="work-kind">Nail salon concept</p>
                     </div>
-                    <a href="https://www.academia.edu/170693170/A_Conceptual_Framework_of_Volitional_Branching_Foreknowledge_Determinism_and_the_Chaos_Anchor" target="_blank" rel="noopener" class="preprint-link">
-                        Read on Academia <i class="fas fa-arrow-right"></i>
+                    <p class="work-desc">Combines service details, gallery, review content, contact information, and a booking inquiry.</p>
+                    <a class="work-link" href="https://tipsandtoesnailspa.netlify.app" target="_blank" rel="noopener">
+                        <span class="work-domain">tipsandtoesnailspa.netlify.app</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                        <span class="visually-hidden">— visit site (opens in a new tab)</span>
                     </a>
+                </li>
+                <li class="work-row reveal">
+                    <span class="work-no">04</span>
+                    <div class="work-cell">
+                        <h3 class="work-name">Milo Nails &amp; Spa</h3>
+                        <p class="work-kind">Nail salon concept</p>
+                    </div>
+                    <p class="work-desc">Groups services and FAQ content while foregrounding contact details and location information.</p>
+                    <a class="work-link" href="https://milonailsandspa.netlify.app" target="_blank" rel="noopener">
+                        <span class="work-domain">milonailsandspa.netlify.app</span>
+                        <span class="work-arrow" aria-hidden="true">↗</span>
+                        <span class="visually-hidden">— visit site (opens in a new tab)</span>
+                    </a>
+                </li>
+            </ol>
+
+            <p class="note">
+                <span class="note-label">Status</span>
+                Independent concepts — not claims of paid-client work or business endorsement. Business details and
+                pricing should be confirmed before any commercial production.
+            </p>
+        </section>
+
+        <!-- ============ 04 · EXPERIENCE ============ -->
+        <section class="chapter" id="experience" data-chapter="04" data-title="Experience">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>04</span> Experience</p>
+                <h2 class="chapter-title">Where the writing has <em>been published.</em></h2>
+            </header>
+
+            <dl class="ledger">
+                <div class="ledger-row reveal">
+                    <dt class="ledger-when">Apr 2024 — Present</dt>
+                    <dd class="ledger-what">
+                        <h3>Independent Content Writer &amp; Publisher</h3>
+                        <p class="ledger-where">Medium · Independent</p>
+                        <ul>
+                            <li>Research, draft, edit, and publish original long-form pieces; manage topic selection, source review, headline development, revisions, formatting, and publication.</li>
+                            <li>Organize complex ideas into reader-friendly openings, scannable subheadings, coherent narrative flow, and a consistent editorial voice.</li>
+                            <li>Write across education and marketing, digital culture, lifestyle, and research-led technology and science topics.</li>
+                        </ul>
+                        <p class="ledger-tags"><span>Long-form</span><span>Editing</span><span>Research</span></p>
+                    </dd>
+                </div>
+
+                <div class="ledger-row reveal">
+                    <dt class="ledger-when">2026</dt>
+                    <dd class="ledger-what">
+                        <h3>Independent Website Content &amp; Publishing Projects</h3>
+                        <p class="ledger-where">Self-directed · Independent</p>
+                        <ul>
+                            <li>Built and published thirteen independent website concepts for local service-business categories; four live examples are documented in the work index above.</li>
+                            <li>Structured service information, page sections, FAQs, galleries, and contact or booking paths so key business details stay easy to scan.</li>
+                        </ul>
+                        <p class="ledger-tags"><span>Website copy</span><span>Information hierarchy</span><span>Page layout</span></p>
+                    </dd>
+                </div>
+
+                <div class="ledger-row reveal">
+                    <dt class="ledger-when">Feb 2022 — May 2024</dt>
+                    <dd class="ledger-what">
+                        <h3>Freelance Content Creator</h3>
+                        <p class="ledger-where">Fiverr · Remote</p>
+                        <ul>
+                            <li>Produced written content, graphics, and marketing materials for clients, handling projects from initial requirements through delivery and feedback.</li>
+                            <li>Developed tailored solutions that consistently earned 5/5 satisfaction ratings, resulting in repeat business and referrals.</li>
+                        </ul>
+                        <p class="ledger-tags"><span>Client work</span><span>Deliverables</span><span>Communication</span></p>
+                    </dd>
+                </div>
+            </dl>
+        </section>
+
+        <!-- ============ 05 · PROCESS ============ -->
+        <section class="chapter" id="process" data-chapter="05" data-title="Process">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>05</span> Process</p>
+                <h2 class="chapter-title">Three steps, <em>in this order.</em></h2>
+            </header>
+
+            <ol class="process">
+                <li class="process-step reveal">
+                    <p class="process-no">01</p>
+                    <h3>Clarify</h3>
+                    <p>Confirm audience, objective, tone, scope, and format before a word is written.</p>
+                </li>
+                <li class="process-step reveal">
+                    <p class="process-no">02</p>
+                    <h3>Create</h3>
+                    <p>Research, outline, draft, edit, and shape the layout so the copy has somewhere to live.</p>
+                </li>
+                <li class="process-step reveal">
+                    <p class="process-no">03</p>
+                    <h3>Refine</h3>
+                    <p>Apply feedback, proofread, and prepare final files ready to hand off or publish.</p>
+                </li>
+            </ol>
+
+            <div class="standards">
+                <div class="standards-col">
+                    <h3 class="block-title">Quality &amp; delivery standards</h3>
+                    <ul class="tick-list">
+                        <li><strong>Audience fit</strong> — Adjust tone, depth, and structure to the reader and the content format.</li>
+                        <li><strong>Clear hierarchy</strong> — Use purposeful headings, concise sections, and visible next steps.</li>
+                        <li><strong>Editorial care</strong> — Review grammar, consistency, clarity, and source support where relevant.</li>
+                        <li><strong>Ready to hand off</strong> — Apply feedback, proofread final copy, keep deliverables organised.</li>
+                    </ul>
+                </div>
+                <div class="standards-col">
+                    <h3 class="block-title">Typical project deliverables</h3>
+                    <ul class="deliverables">
+                        <li>
+                            <p class="deliverable-name">Writing</p>
+                            <p>Article or blog draft, headline options, clear section structure, and a polished final copy.</p>
+                        </li>
+                        <li>
+                            <p class="deliverable-name">Website copy</p>
+                            <p>Homepage or service-page text, service descriptions, FAQs, and calls to action.</p>
+                        </li>
+                        <li>
+                            <p class="deliverable-name">Social content</p>
+                            <p>Caption options, bilingual short-form copy, audience prompts, and platform-ready formatting.</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills" aria-label="Skills and Expertise">
-        <div class="container">
-            <h2 class="section-title">Skills & Expertise</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Content Creation</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Copywriting</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Creative Writing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Content Strategy</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Blogging</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- ============ 06 · SELECTED WRITING ============ -->
+        <section class="chapter" id="writing" data-chapter="06" data-title="Selected Writing">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>06</span> Selected Writing</p>
+                <h2 class="chapter-title">Three pieces from <em>the archive.</em></h2>
+            </header>
 
-                <div class="skill-category">
-                    <h3>Digital Marketing</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">SEO Auditing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Keyword Research</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Social Media Marketing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Email Marketing</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <ol class="writing-list">
+                <li class="writing-row reveal">
+                    <span class="writing-no">01</span>
+                    <a class="writing-link" href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener">
+                        <h3>The $14 Billion Shitpost: How Alexandr Wang Made Meta Cool Again</h3>
+                    </a>
+                    <p class="writing-note">Explores internet culture, brand positioning, and audience attention.</p>
+                    <p class="writing-tag">Digital culture</p>
+                </li>
+                <li class="writing-row reveal">
+                    <span class="writing-no">02</span>
+                    <a class="writing-link" href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener">
+                        <h3>The Invisible Infiltration: How Rogue AI Agents Breached India's Critical Infrastructure</h3>
+                    </a>
+                    <p class="writing-note">Research-led reporting on AI-agent security risks and critical infrastructure.</p>
+                    <p class="writing-tag">Technology</p>
+                </li>
+                <li class="writing-row reveal">
+                    <span class="writing-no">03</span>
+                    <a class="writing-link" href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener">
+                        <h3>The Importance of Planning Your Online Course</h3>
+                    </a>
+                    <p class="writing-note">Explains how planning supports a coherent online-course experience.</p>
+                    <p class="writing-tag">Education &amp; marketing</p>
+                </li>
+            </ol>
 
-                <div class="skill-category">
-                    <h3>Design & Branding</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Graphic Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">UI/UX Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Logo Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Infographic Design</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                        </div>
+            <p class="link-out">
+                <a href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener">Full writing archive on Medium <span aria-hidden="true">→</span></a>
+            </p>
+        </section>
+
+        <!-- ============ 07 · SOCIAL CONCEPT ============ -->
+        <section class="chapter chapter-invert" id="social" data-chapter="07" data-title="Social Concept">
+            <div class="invert-inner">
+                <header class="chapter-head">
+                    <p class="chapter-no"><span>07</span> Social Concept</p>
+                    <h2 class="chapter-title">TheLoneChair</h2>
+                </header>
+                <div class="two-col">
+                    <div class="col-main">
+                        <p class="dropcap">A cross-platform creative direction built around empty-chair imagery, liminal settings, and reflective short-form writing. The concept pairs visuals with bilingual English and Vietnamese captions and open-ended prompts for Instagram, Threads, and X.</p>
+                        <ul class="focus-list">
+                            <li>Visual consistency across platforms</li>
+                            <li>Concise caption writing</li>
+                            <li>Language adaptation, EN / VI</li>
+                            <li>Platform-aware formatting</li>
+                        </ul>
                     </div>
+                    <aside class="marginalia">
+                        <p class="margin-label">Concept status</p>
+                        <p>A self-directed creative direction — a demonstration of voice, captioning, and visual consistency rather than a client campaign.</p>
+                    </aside>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact" aria-label="Contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Let's work together!</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Whether you need content creation, SEO optimization, research collaboration, or design work, feel free to reach out.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope" aria-hidden="true"></i>
-                            <span>annguyen030205@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone" aria-hidden="true"></i>
-                            <span>+1 (714) 470-6526</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                            <span>Anaheim, California, United States</span>
-                        </div>
+        <!-- ============ 08 · LONG-FORM PUBLISHING ============ -->
+        <section class="chapter" id="publishing" data-chapter="08" data-title="Long-form Publishing">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>08</span> Long-form Publishing</p>
+                <h2 class="chapter-title">A book, from rice fields <em>to a new country.</em></h2>
+            </header>
+
+            <div class="book">
+                <figure class="book-cover reveal">
+                    <div class="book-object">
+                        <img src="Untitled design (3).jpg" alt="Front cover of Student Perspective For Today's World — a lone figure walking a path through a rice field toward a city at sunrise." loading="lazy" decoding="async" width="1080" height="1920">
+                        <span class="book-spine" aria-hidden="true"></span>
                     </div>
-                    <div class="social-links">
-                        <a href="https://independent.academia.edu/AdamNorvix" target="_blank" rel="noopener" class="social-link" aria-label="Academia.edu"><i class="fas fa-graduation-cap"></i></a>
-                        <a href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener" class="social-link" aria-label="Medium"><i class="fab fa-medium"></i></a>
-                        <a href="https://www.linkedin.com/in/huynh-thien-an-nguyen-045bb1291/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link" aria-label="Fiverr"><i class="fab fa-fiverr"></i></a>
-                    </div>
+                    <figcaption class="book-caption">Cover artwork — ebook edition</figcaption>
+                </figure>
+                <div class="book-text">
+                    <p class="book-flag">Independently published</p>
+                    <h3 class="book-title">Student Perspective For Today's World</h3>
+                    <p class="book-author">By Huynh Thien An Nguyen</p>
+                    <p>From rice fields of Vietnam to the streets of America, this collection captures the journey of a student between two worlds — childhood, cultural shock, loneliness, financial struggle, and the quiet search for belonging, purpose, and hope.</p>
+                    <dl class="colophon">
+                        <div><dt>Published</dt><dd>August 2025</dd></div>
+                        <div><dt>Format</dt><dd>Ebook · PDF</dd></div>
+                        <div><dt>Subjects</dt><dd>Essay collection · Young adult</dd></div>
+                        <div><dt>Available</dt><dd>Lulu</dd></div>
+                    </dl>
+                    <p class="link-out">
+                        <a href="https://www.lulu.com/shop/huynh-thien-an-nguyen/student-perspective-for-todays-world/ebook/product-578ewdy.html" target="_blank" rel="noopener">Get the book <span aria-hidden="true">→</span></a>
+                    </p>
+                    <aside class="marginalia book-note">
+                        <p class="margin-label">Independent title</p>
+                        <p>A self-published collection, written and released outside of client work.</p>
+                    </aside>
                 </div>
-                <form class="contact-form" novalidate>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true">
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Project Type" required aria-required="true">
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Tell me about your project" rows="5" required aria-required="true"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <!-- ============ 09 · RESEARCH ============ -->
+        <section class="chapter" id="research" data-chapter="09" data-title="Research">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>09</span> Research</p>
+                <h2 class="chapter-title">Independent preprints, <em>kept on the side.</em></h2>
+                <p class="chapter-sub">Writer-led theoretical work in physics, cosmology, and philosophy of mind. Published as preprints for open review, not as peer-reviewed results.</p>
+            </header>
+
+            <ol class="research-list">
+                <li class="research-row reveal">
+                    <span class="research-no">01</span>
+                    <div>
+                        <h3>Ontology from Nothingness: Morphology, Optical Anomalies, and Mechanical Collapse of the Cognitive Polyhedron</h3>
+                        <p class="research-abstract">Challenges the axiom “ex nihilo nihil fit” through the Zero Input Simulation Protocol — an environment stripped of fundamental forces, matter, and spacetime — and reports the formation of an object that violates Snell's Law and the Second Law of Thermodynamics.</p>
+                        <p class="research-tags">Theoretical physics · Cosmology · Philosophy of science · 2026</p>
+                    </div>
+                    <a class="research-link" href="https://www.academia.edu/164849470/Ontology_from_Nothingness_A_Comprehensive_Analysis_of_the_Morphology_Optical_Anomalies_and_Mechanical_Collapse_of_the_Cognitive_Polyhedron_X_Cognition_" target="_blank" rel="noopener">Read on Academia <span aria-hidden="true">→</span></a>
+                </li>
+                <li class="research-row reveal">
+                    <span class="research-no">02</span>
+                    <div>
+                        <h3>Phase-Transitioned Stringy Dark Matter (PTSDM): A Unified Model for Small-Scale Structure and Gravitational Wave Signatures</h3>
+                        <p class="research-abstract">Proposes dark matter as an ultra-heavy scalar field undergoing a density-triggered symmetry-breaking phase transition, resolving the cusp–core problem and predicting a resonant nanohertz gravitational-wave peak testable by NANOGrav, SKA, and lensing surveys.</p>
+                        <p class="research-tags">Dark matter · Cosmology · Gravitational waves · 2026</p>
+                    </div>
+                    <a class="research-link" href="https://www.academia.edu/165427584/Phase_Transitioned_Stringy_Dark_Matter_PTSDM_A_Unified_Model_for_Small_Scale_Structure_and_Gravitational_Wave_Signatures_From_a_Gedankenexperiment_to_a_Peer_Review_Ready_Framework" target="_blank" rel="noopener">Read on Academia <span aria-hidden="true">→</span></a>
+                </li>
+                <li class="research-row reveal">
+                    <span class="research-no">03</span>
+                    <div>
+                        <h3>A Conceptual Framework of Volitional Branching: Foreknowledge, Determinism, and the Chaos Anchor</h3>
+                        <p class="research-abstract">A two-tiered causal model — a deterministic Temporal Anchor and a discontinuous Chaos Anchor — showing how concentrated volitional autonomy can force reality to admit alternative trajectories, and reframing the paradox of foreknowledge.</p>
+                        <p class="research-tags">Philosophy · Metaphysics · Free will · 2026</p>
+                    </div>
+                    <a class="research-link" href="https://www.academia.edu/170693170/A_Conceptual_Framework_of_Volitional_Branching_Foreknowledge_Determinism_and_the_Chaos_Anchor" target="_blank" rel="noopener">Read on Academia <span aria-hidden="true">→</span></a>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============ 10 · BACKGROUND ============ -->
+        <section class="chapter" id="background" data-chapter="10" data-title="Background">
+            <header class="chapter-head">
+                <p class="chapter-no"><span>10</span> Background</p>
+                <h2 class="chapter-title">Study, languages, <em>and how I work.</em></h2>
+            </header>
+
+            <table class="bg-table">
+                <caption class="visually-hidden">Education and working details</caption>
+                <tbody>
+                    <tr>
+                        <th scope="row">Education</th>
+                        <td>
+                            <strong>California State University, Fullerton</strong> — B.S. Computer Science, 2021–2025<br>
+                            Golden West College, Computer Science, 2021–2022 · Cypress College, Computer Science, 2020–2021
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Languages</th>
+                        <td>Vietnamese (native) · English (professional)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Work style</th>
+                        <td>Remote, project-based — from research and first draft through revisions and handoff.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- ============ 11 · CONTACT ============ -->
+        <section class="chapter chapter-invert" id="contact" data-chapter="11" data-title="Contact">
+            <div class="invert-inner">
+                <header class="chapter-head">
+                    <p class="chapter-no"><span>11</span> Contact</p>
+                    <h2 class="chapter-title">Tell me what needs <em>writing.</em></h2>
+                </header>
+                <div class="contact-grid">
+                    <div class="contact-text">
+                        <p>Tell me the audience, the objective, the tone, the scope, and the format — and what the piece has to do. From there the work follows the same three steps as everything above.</p>
+                        <ul class="contact-list">
+                            <li><span>Email</span><a href="mailto:annguyen030205@gmail.com">annguyen030205@gmail.com</a></li>
+                            <li><span>Phone</span><a href="tel:+17144706526">+1 (714) 470-6526</a></li>
+                            <li><span>Location</span>Anaheim, California, United States</li>
+                        </ul>
+                        <ul class="socials">
+                            <li><a href="https://medium.com/@nguyenan04102004" target="_blank" rel="noopener">Medium</a></li>
+                            <li><a href="https://www.linkedin.com/in/huynh-thien-an-nguyen-045bb1291/" target="_blank" rel="noopener">LinkedIn</a></li>
+                            <li><a href="https://independent.academia.edu/AdamNorvix" target="_blank" rel="noopener">Academia</a></li>
+                        </ul>
+                    </div>
+
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="field">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="field">
+                            <label for="subject">Project type</label>
+                            <input type="text" id="subject" name="subject" placeholder="Article, service page, proofread…" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">The brief</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Audience, objective, tone, scope, deadline." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid btn-wide">Send the brief</button>
+                        <p class="form-hint" id="formHint">Opens your email app with the brief filled in — nothing is stored on this site.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Huynh Thien An Nguyen. All rights reserved.</p>
+        <div class="footer-grid">
+            <div>
+                <p class="footer-name">Huynh Thien An Nguyen</p>
+                <p class="footer-role">Freelance content creator — writing, editing &amp; web design</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="#profile">Profile</a>
+                <a href="#work">Work</a>
+                <a href="#writing">Writing</a>
+                <a href="#research">Research</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <p class="footer-note">
+                Layout notes: two third-party editorial templates (an eclipse/space composition and a travel
+                composition) were used as visual references only — not client deliverables. The travel sample carries
+                third-party attribution and should be replaced before any commercial use.
+            </p>
         </div>
+        <p class="footer-base">
+            <span>© <span id="year">2026</span> Huynh Thien An Nguyen</span>
+            <span>Built and written by hand — no template.</span>
+        </p>
     </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
     <script src="script.js"></script>
 </body>

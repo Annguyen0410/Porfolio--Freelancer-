@@ -1,195 +1,93 @@
-# Portfolio Website - Huynh Thien An Nguyen
+# Portfolio — Huynh Thien An Nguyen
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript. This portfolio showcases professional skills, work experience, and educational background for a content creator and digital strategist.
+A one-page portfolio for a freelance content creator, built as plain HTML, CSS, and JavaScript.
+No build step, no framework, no dependencies — open `index.html` and it runs.
 
-## 🚀 Features
+The design language is **"Editorial Index"**: a paper-and-ink palette, one display serif
+(Fraunces), one reading serif (Newsreader), one mono for labels (IBM Plex Mono), hairline rules
+instead of drop shadows, and a numbered chapter structure you can jump through.
 
-- **Responsive Design**: Mobile-first approach with beautiful layouts for all devices
-- **Modern UI/UX**: Clean, professional design with smooth animations
-- **Interactive Elements**: Smooth scrolling, mobile navigation, and form validation
-- **Professional Timeline**: Beautiful work experience timeline with company details
-- **Education Showcase**: Academic background with visual icons
-- **Skills Visualization**: Progress bars for technical and creative skills
-- **Performance Optimized**: Fast loading with optimized CSS and JavaScript
-- **SEO Friendly**: Semantic HTML structure for better search engine visibility
-- **Cross-browser Compatible**: Works on all modern browsers
+## Content source
 
-## 📁 File Structure
+Every claim on the page is taken from **`An_Nguyen_Freelance_Content_Creator_Resume_Professional_A4.pdf`**
+(Anaheim, CA · freelance content creator — writing, editing & web design):
+
+| Resume section | On the page |
+| --- | --- |
+| Professional profile | Chapter 01 · Profile |
+| Core capabilities (4 areas) | Chapter 02 · Capabilities |
+| Independent website & publishing projects | Chapter 03 · Website Work (13 concepts, 4 live) |
+| Relevant experience | Chapter 04 · Experience |
+| Project workflow (clarify / create / refine) | Chapter 05 · Process |
+| Selected published writing | Chapter 06 · Selected Writing |
+| Social content concept — TheLoneChair | Chapter 07 · Social Concept |
+| Long-form publishing (the book) | Chapter 08 · Long-form Publishing |
+| — (kept from the earlier site) | Chapter 09 · Research preprints |
+| Education & languages | Chapter 10 · Background |
+| Contact details | Chapter 11 · Contact |
+
+The resume's own disclaimers are preserved verbatim in spirit: the four websites are labelled
+**independent concepts, not paid-client work or business endorsement**, and the preprints are
+labelled **preprint / not peer-reviewed**.
+
+## What changed from the previous version
+
+- The old hero statistics ("3+ years experience", "100% client satisfaction", "50+ projects") were
+  replaced by figures the resume actually supports: 13 website concepts, 4 live, publishing since
+  2024, 2 working languages.
+- The Fiverr experience, education, and preprints were kept, but re-labelled so nothing reads as
+  client work that was not client work.
+- The generic timeline / card / progress-bar layout was replaced by a chapter-and-ledger layout.
+- Font Awesome and the old colour system were dropped; icons are now typographic.
+
+## Design system
+
+- **Type**: Fraunces (display, variable), Newsreader (body), IBM Plex Mono (labels, figures).
+- **Colour**: `--paper` / `--ink` / `--accent` (vermilion) with a full dark variant that flips
+  `--invert-*`, so the two inverted chapters (Social Concept, Contact) invert again in dark mode.
+- **Layout**: fixed vertical spine on ≥1180px, full-screen index overlay, numbered chapters,
+  marginalia column, hairline rules, a 13-cell figure block for the "13 concepts / 4 live" claim.
+- **Components**: `.chapter`, `.specimen`, `.capability-grid`, `.ledger`, `.counter`, `.work-row`,
+  `.writing-row`, `.research-row`, `.bg-table`, `.note`, `.toast`.
+
+## Behaviour (`script.js`)
+
+- Colour mode: follows `prefers-color-scheme` on first visit, remembers the choice in
+  `localStorage` under `theme`.
+- Index overlay: opens from the top bar, closes on Escape / link click, locks body scroll, returns
+  focus to the button.
+- Scroll-spy: the spine shows the current chapter (`№ 06 · Selected Writing`).
+- Reading-progress bar, sticky top-bar rule, and reveal-on-scroll (`prefers-reduced-motion` is
+  respected).
+- Contact form: validates name / email / project type / brief, marks `aria-invalid`, then opens the
+  visitor's mail app with a pre-filled `mailto:` to `annguyen030205@gmail.com`. Nothing is stored
+  or sent anywhere else — there is no backend.
+
+## Files
 
 ```
-portfolio-website/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and responsive design
-├── script.js           # JavaScript functionality
-├── README.md           # This file
-└── resume.pdf          # Your resume/portfolio content
+index.html   # all content, one page, 11 numbered chapters
+styles.css   # the design system (tokens → components → responsive → print)
+script.js    # theme, index overlay, scroll-spy, reveal, form
+Untitled design (3).jpg   # book cover
 ```
 
-## 🛠️ Setup Instructions
+## Run and deploy
 
-1. **Download/Clone**: Save all files to your local directory
-2. **Open in Browser**: Double-click `index.html` or open it in your preferred web browser
-3. **Customize**: Edit the content in `index.html` to match your information
-4. **Deploy**: Upload to any web hosting service (GitHub Pages, Netlify, Vercel, etc.)
+```bash
+# any static server, e.g.
+python -m http.server 4321 --bind 127.0.0.1
+```
 
-## ✨ Customization Guide
+Static hosting works as-is: GitHub Pages, Netlify, Cloudflare Pages, Vercel. There is no build
+step, so publishing means uploading this folder.
 
-### Personal Information
-Edit the following sections in `index.html`:
+## Known placeholders
 
-- **Hero Section**: Update name, title, and description
-- **About Section**: Modify your bio and statistics
-- **Experience Section**: Update work history and company details
-- **Education Section**: Modify academic background
-- **Skills Section**: Adjust skill levels and categories
-- **Contact Section**: Update contact details and social media links
-
-### Styling
-Modify `styles.css` to change:
-
-- **Colors**: Update the color scheme in CSS variables
-- **Fonts**: Change font families and sizes
-- **Layouts**: Adjust spacing, margins, and grid layouts
-- **Animations**: Modify transition effects and animations
-
-### Functionality
-Customize `script.js` for:
-
-- **Form Handling**: Connect contact form to your backend
-- **Animations**: Adjust timing and effects
-- **Interactions**: Modify user experience features
-
-## 🎨 Color Scheme
-
-The current design uses a professional color palette:
-
-- **Primary**: #2563eb (Blue)
-- **Secondary**: #3b82f6 (Light Blue)
-- **Accent**: #f59e0b (Amber)
-- **Background**: #f8fafc (Light Gray)
-- **Text**: #1f2937 (Dark Gray)
-
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 480px
-- **Tablet**: 480px - 768px
-- **Desktop**: > 768px
-
-## 🔧 Browser Support
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-- Internet Explorer 11+
-
-## 📝 Content Sections
-
-### 1. Hero Section
-- Your name and title
-- Professional tagline
-- Call-to-action buttons
-
-### 2. About Section
-- Personal introduction
-- Professional summary
-- Key statistics/achievements
-
-### 3. Work Experience
-- Timeline-based work history
-- Company names and durations
-- Job descriptions and achievements
-- Skill tags for each position
-
-### 4. Education
-- Academic institutions
-- Degrees and fields of study
-- Graduation years
-- Visual icons for each level
-
-### 5. Skills Section
-- Technical and creative skills with progress bars
-- Organized by categories (Content Creation, Digital Marketing, Design)
-- Visual skill representation
-
-### 6. Contact Section
-- Contact form
-- Personal contact information
-- Social media links
-
-## 🚀 Deployment Options
-
-### GitHub Pages
-1. Create a new repository
-2. Upload your files
-3. Enable GitHub Pages in repository settings
-4. Your site will be available at `username.github.io/repository-name`
-
-### Netlify
-1. Drag and drop your project folder to Netlify
-2. Your site will be deployed instantly
-3. Get a custom domain or use the provided Netlify subdomain
-
-### Vercel
-1. Connect your GitHub repository
-2. Vercel will automatically deploy your site
-3. Get automatic deployments on every push
-
-## 📊 Performance Tips
-
-- Optimize images before uploading
-- Minify CSS and JavaScript for production
-- Use a CDN for external resources
-- Enable gzip compression on your server
-- Implement lazy loading for images
-
-## 🔒 Security Considerations
-
-- Validate all form inputs
-- Use HTTPS in production
-- Sanitize user-generated content
-- Keep dependencies updated
-- Implement proper CORS policies
-
-## 📈 SEO Optimization
-
-- Use semantic HTML elements
-- Include meta descriptions
-- Optimize page titles
-- Add alt text to images
-- Ensure proper heading hierarchy
-- Include structured data markup
-
-## 🎯 Target Audience
-
-This portfolio is designed for:
-- **Content Creators**: Writers, bloggers, copywriters
-- **Digital Marketers**: SEO specialists, social media managers
-- **Designers**: Graphic designers, UI/UX professionals
-- **Freelancers**: Independent professionals seeking clients
-- **Students**: Recent graduates showcasing their skills
-
-## 🤝 Contributing
-
-Feel free to fork this project and customize it for your needs. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- Font Awesome for icons
-- Google Fonts for typography
-- Modern CSS Grid and Flexbox
-- Intersection Observer API for animations
-
-## 📞 Support
-
-If you need help customizing this portfolio or have questions about the implementation, feel free to reach out through the contact form on the website.
-
----
-
-**Happy Creating! 🎉**
-
-*Built with ❤️ for showcasing your professional journey as a content creator and digital strategist*
+- The three article titles link to the Medium archive (`medium.com/@nguyenan04102004`) rather than
+  to individual posts, because the resume lists only the archive URL. Replace with the per-article
+  URLs when they are handy.
+- The footer note records that two third-party editorial templates were used as *visual references
+  only*, and that the travel sample carries third-party attribution to be verified before
+  commercial use.
+- The page ends with a print stylesheet, so `Cmd/Ctrl + P` produces a clean paper-shaped version.
